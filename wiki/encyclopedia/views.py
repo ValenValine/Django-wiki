@@ -4,6 +4,7 @@ import markdown2
 import random
 
 
+
 def index(request):
     return render(request, "encyclopedia/index.html", {
         "entries": util.list_entries()
@@ -42,26 +43,23 @@ def new(request):
         
 def search(request):
     if request.method == "POST":
-        query = request.POST['q'],
-        content_in_html = entry.content(),
-        if content_in_html is not None:
+        query = request.POST['q']
+        content = util.get_entry(query)
+        if content is not None:
             return render(request, "encyclopedia/entry.html", {
                 "title" : query,
-                "content": content_in_html
+                "content": markdown2.markdown(util.get_entry(query))
             })
         else:
-            entries_list = util.list_entries()
-            suggestion = []
-            for entry in entries_list:
-                if query.lower() in entry.lower():
-                    suggestion.append(entry)
+            entries = util.list_entries()
+            suggestion = [entry for entry in entries if query.lower() in entry.lower()]
             return render(request, "encyclopedia/search.html", {
                 "suggestion": suggestion
             })
         
 def edit(request):
     if request.method == "POST":
-        title= request.POST['hidden-title']
+        title= request.POST['title']
         content = util.get_entry(title)
         return render(request, "encyclopedia/edit.html", {
             "title" : title,
@@ -69,7 +67,7 @@ def edit(request):
         })
     
 def submitChanges(request):
-    if request.method =="GET":
+    if request.method =="POST":
         title= request.POST['title']
         content= request.POST['content']
         util.save_entry(title, content)
@@ -80,10 +78,9 @@ def submitChanges(request):
 
 
 def randomPage(request):
-    entries_list= util.list_entries()
-    random_entry = random.choice(entries_list)
-    content_in_html= entry.content(title)
+    entries= util.list_entries()
+    random_entry = random.choice(entries)
     return render(request, "encyclopedia/entry.html", {
         "title" : random_entry,
-        "content" : content_in_html
+        "content" : markdown2.markdown(util.get_entry(random_entry))
     })

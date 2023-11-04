@@ -5,11 +5,11 @@
 {% endblock %}
 
 {% block body %}
-    <h1>All Pages</h1>
+    <h1>Suggested pages:</h1>
 
     <ul>
         {% for entry in suggestion %}
-            <li><a href="{% url 'suggestion' title=suggestion%}">{{ suggestion }}</a></li>
+            <li><a href="{% url 'entry' title=entry%}">{{ entry }}</a></li>
         {% endfor %}
     </ul>
     
