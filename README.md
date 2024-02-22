@@ -2,7 +2,9 @@ CS50W Project 1- Django-based Wiki
 
 This project was done following the specifications of the real Wikipedia. The application was built with Django, a Python-based framework used for web development.
 
+
 The specifications are as follow:
+
 -Any markdown content would be converted to HTML for display using python-markdown2 package.
 
 -Entry Page: Visiting the entry page (/wiki/TITLE) would render a page displaying the contents of the entry TITLE by calling the appropriate util function. 
