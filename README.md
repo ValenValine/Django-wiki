@@ -39,4 +39,4 @@ Once the application is running, you can interact with it through your web brows
 
 **License**
 
-This project is provided for educational purposes only. It is not intended for commercial use or redistribution. All rights reserved. 
+This project is for educational purposes only. It is not intended for commercial use or redistribution. All rights reserved. 
