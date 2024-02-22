@@ -21,6 +21,7 @@ This project was developed as part of CS50W at Harvard University. This project 
 
     Search: Users can type a query into the search box in the sidebar to search for an entry. If the query matches an entry, the user is redirected to that entry page. If the query matches any substring of an entry title, the user is presented with a page showing the entry pages containing the said substring in their titles. Clicking on any of the entry names on the search results page takes the user to that entry’s page.
 
+
 **Installation**
 
 To run the project locally, follow these steps:
@@ -30,9 +31,12 @@ To run the project locally, follow these steps:
     Run the Django development server using python manage.py runserver.
     Access the application in your web browser at http://localhost:8000.
 
+
 **Usage**
 
 Once the application is running, you can interact with it through your web browser. Navigate to different pages using the provided links and features such as entry pages, creating new pages, editing pages, searching, and accessing random pages.
 
+
 **License**
+
 This project is provided for educational purposes only. It is not intended for commercial use or redistribution. All rights reserved. 
