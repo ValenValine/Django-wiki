@@ -3,6 +3,8 @@
 ## Project Background
 
 This project was developed as part of CS50W at Harvard University. This project is a clone of Wikipedia, built following the specifications of the real Wikipedia. It was developed using Django, a Python-based framework for web development.
+
+
 **Specifications**
 
     Markdown Conversion: Any Markdown content is converted to HTML for display using the python-markdown2 package.
