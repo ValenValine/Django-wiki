@@ -33,3 +33,6 @@ To run the project locally, follow these steps:
 **Usage**
 
 Once the application is running, you can interact with it through your web browser. Navigate to different pages using the provided links and features such as entry pages, creating new pages, editing pages, searching, and accessing random pages.
+
+**License**
+This project is provided for educational purposes only. It is not intended for commercial use or redistribution. All rights reserved. 
