@@ -1,4 +1,4 @@
-##Django Wikipedia Clone
+## Django Wikipedia Clone
 
 **Project Background**
 
